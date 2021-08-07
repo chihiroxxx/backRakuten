@@ -39,8 +39,7 @@ module BackRakuten
     config.api_only = true
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        # origins 'http://54.64.212.72'sssss
-        origins '*',
+        origins 'http://54.64.212.72'
         resource '*',
         headers: :any,
         methods: [:get, :post, :put, :patch, :delete, :options, :head],
