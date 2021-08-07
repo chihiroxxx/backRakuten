@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: backRakuten_production
-  username: backRakuten
-  password: <%= ENV['BACKRAKUTEN_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
