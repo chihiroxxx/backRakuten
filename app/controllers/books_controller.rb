@@ -14,6 +14,14 @@ class BooksController < ApplicationController
 
   end
 
+  def update
+    book = Book.find(params[:id])
+    if book.update(book_params)
+      render json: {book: book}
+    end
+
+  end
+
   private
   def book_params
     params.permit(:booktitle, :author, :bookimage, :thoughts, :date)
