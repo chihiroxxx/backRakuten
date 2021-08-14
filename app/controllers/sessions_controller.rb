@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       # render json:するセッション返すのかな？
       # render json: { message: "sign in success" }??
-      render json: {session: user.id}
+      render json: {user_id: user.id}
     else
       render json: { message: "unauthorized" }, status: 401
     end
