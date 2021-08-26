@@ -42,6 +42,13 @@ class BooksController < ApplicationController
 
   end
 
+  def destroy
+    if book = Book.find(params[:id])
+    book.destroy
+    end
+
+  end
+
   def get_csv
     # books = Book.all
     if user = User.find(params[:user_id])

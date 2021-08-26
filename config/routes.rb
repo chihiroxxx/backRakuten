@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get 'csv', to: 'books#get_csv'
 
   root 'home#index'
-  resources :books, only: [:index,:create, :update]
+  resources :books, only: [:index,:create, :update, :destroy]
   resources :users, only: [:new,:create]
 end
