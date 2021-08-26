@@ -13,12 +13,16 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  # 今までのES2用
+  # username: root
+  # password:
+  # socket: /tmp/mysql.sock
 
   # 以下Docker用
-  # password: password
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  # hostがRDSのエンドポイント！
+  host: mementotime-database.ckts8uhssfep.ap-northeast-1.rds.amazonaws.com
   # host: mysql
   # port: 3306
 
