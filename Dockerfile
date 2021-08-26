@@ -33,5 +33,6 @@ ENTRYPOINT ["entrypoint.sh"]
 # VOLUME /app/public
 # VOLUME /app/tmp
 
-CMD bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+# CMD bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+CMD bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000"
 # CMD bash -c "rm -f tmp/pids/server.pid && bundle exec puma -C config/puma.rb"
