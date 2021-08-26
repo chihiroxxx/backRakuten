@@ -39,7 +39,7 @@ module BackRakuten
     config.api_only = true
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'http://54.64.212.72', 'http://mementotime.net','http://localhost:8080','http://54.168.139.169','http://3.114.129.4'
+        origins 'http://54.64.212.72', 'http://mementotime.net','http://localhost:8080','http://54.168.139.169','http://3.114.129.4','http://test-856344640.ap-northeast-1.elb.amazonaws.com'
         # origins 'http://localhost:8080'
         resource '*',
         headers: :any,
