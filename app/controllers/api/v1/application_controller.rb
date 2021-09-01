@@ -1,3 +1,5 @@
+module Api
+  module V1
 class ApplicationController < ActionController::API
   # before_action :current_user
 
@@ -35,4 +37,6 @@ class ApplicationController < ActionController::API
 
     render json: { error: 'forbidden' }, status: :forbidden
   end
+end
+end
 end

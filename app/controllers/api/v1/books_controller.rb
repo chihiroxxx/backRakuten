@@ -1,3 +1,5 @@
+module Api
+  module V1
 class BooksController < ApplicationController
   require 'csv'
   def index
@@ -82,4 +84,6 @@ class BooksController < ApplicationController
   def book_params
     params.permit(:booktitle, :author, :bookimage, :thoughts, :date, :user_id)
   end
+end
+end
 end

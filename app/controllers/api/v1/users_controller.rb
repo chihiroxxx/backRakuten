@@ -1,3 +1,5 @@
+module Api
+  module V1
 class UsersController < ApplicationController
   skip_before_action :check_is_signed_in
   def new
@@ -21,4 +23,6 @@ class UsersController < ApplicationController
   def user_params
     params.permit(:name, :password, :password_confirmation)
   end
+end
+end
 end

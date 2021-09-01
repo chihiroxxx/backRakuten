@@ -1,3 +1,5 @@
+module Api
+  module V1
 class SessionsController < ApplicationController
   skip_before_action :check_is_signed_in
   # , only: :create
@@ -16,4 +18,6 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:user_id)
   end
+end
+end
 end
