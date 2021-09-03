@@ -41,7 +41,7 @@ test:
   <<: *default
   database: backRakuten_test
   username: root
-  password:
+  password: password
   host: <%= ENV.fetch("APP_DATABASE_HOST") { 'db' } %>
   # socket: /tmp/mysql.sock
 
