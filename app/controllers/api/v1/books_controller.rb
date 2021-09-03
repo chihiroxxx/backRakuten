@@ -32,6 +32,7 @@ module Api
         book = Book.new(book_params)
         if book.valid?
           book.save
+          render json: { message: "book created!" }, status: 200
         end
 
       end
@@ -46,7 +47,8 @@ module Api
 
       def destroy
         if book = Book.find(params[:id])
-        book.destroy
+          book.destroy
+          render json: { message: "book destroyed!" }, status: 200
         end
 
       end

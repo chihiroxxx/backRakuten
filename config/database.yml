@@ -13,7 +13,7 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  # 今までのES2用(&ローカル開発用)
+  # # 今までのES2用(&ローカル開発用)
   # username: root
   # password:
   # socket: /tmp/mysql.sock
@@ -63,6 +63,14 @@ test:
 production:
   <<: *default
   database: backRakuten_production
-  username: root
+  # username: root
+  # password: <%= ENV['DATABASE_PASSWORD'] %>
+  # socket: /var/lib/mysql/mysql.sock
+
+  username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
-  socket: /var/lib/mysql/mysql.sock
+  # hostがRDSのエンドポイント！
+  # host: mementotime-database.ckts8uhssfep.ap-northeast-1.rds.amazonaws.com
+
+  # hostも環境変数にできないだろうか！？！？
+  host: <%= ENV['DATABASE_HOSTNAME'] %>
