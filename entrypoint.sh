@@ -2,7 +2,7 @@
 set -e
 
 # Remove a potentially pre-existing server.pid for Rails.
-rm -f /app/tmp/pids/server.pid
+rm -f /app/tmp/pids/unicorn.pid
 # WARNING:createとseedはfargateの初回のみ実行
 # WARNING:タスクを個々に作って実行の方がいいかも
 
