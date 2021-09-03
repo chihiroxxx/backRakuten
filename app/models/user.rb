@@ -13,4 +13,8 @@ class User < ApplicationRecord
 
   validates :password,
     length: { minimum: 8 }
+    # format: {
+    #   with: /\A[a-z0-9]+\z/,
+    #   message: 'は小文字英数字で8文字以上で入力！！'
+    # }
 end

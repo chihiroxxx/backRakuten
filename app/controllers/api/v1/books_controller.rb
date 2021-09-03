@@ -7,7 +7,7 @@ module Api
         if user = User.find(params[:user_id])
         # user_id = user.id
         books = user.books.order("created_at DESC")
-        render json: {books: books, user: user}
+        render json: {books: books, user: user} #, status: 200
         else
           render json: { message: "unauthorized" }, status: 401
         end
