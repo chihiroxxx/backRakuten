@@ -39,8 +39,10 @@ jobs:
           command: bundle exec rails db:migrate
       # - run:
       # name: test rspec
-      - ruby/rspec-test
-
+      # - ruby/rspec-test
+      - run:
+          name: API test
+          command: bundle exec rspec spec/requests/api/v1/books_spec.rb
 workflows:
   version: 2
   build_and_test:
