@@ -2,7 +2,7 @@
 class ApplicationController < ActionController::API
   # before_action :current_user
 
-  before_action :check_xhr_header
+  # before_action :check_xhr_header
 
 
   before_action :check_is_signed_in
