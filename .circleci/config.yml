@@ -78,7 +78,7 @@ workflows:
           region: AWS_REGION_ENV_VAR_NAME
           repo: memento_rails # ECRのリポジトリ名
           tag: latest # プッシュコマンドのタグでしょ？いつもの
-          path: ../. # pathToMyDockerfile
+          path: ./ # pathToMyDockerfile
           dockerfile: Dockerfile # myDockerfile
           requires:
             - test
