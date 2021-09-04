@@ -84,7 +84,7 @@ workflows:
             - test
           filters:
             branches:
-              only: main
+              only: master
       - aws-ecs/deploy-service-update:
           cluster-name: teddytime # クラスター名
           family: teddytime_api # タスク定義のファミリーのところ
@@ -96,4 +96,4 @@ workflows:
             - aws-ecr/build-and-push-image
           filters:
             branches:
-              only: main
+              only: master
