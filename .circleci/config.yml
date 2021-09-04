@@ -4,10 +4,10 @@ orbs:
   aws-ecr: circleci/aws-ecr@7.2.0
   aws-ecs: circleci/aws-ecs@2.2.1
 
-executors:
-  docker_build:
-    machine:
-      docker_layer_caching: true
+# executors:
+#   docker_build:
+#     machine:
+#       docker_layer_caching: true
 
 jobs:
   build:
@@ -69,7 +69,7 @@ workflows:
             - build
       # - deploy:
       - aws-ecr/build-and-push-image:
-          executor: docker_build
+          # executor: docker_build
           # name: "ecr_building"
           # circleciの環境変数？？？どこで設定するんだ？？
           account-url: AWS_ECR_ACCOUNT_URL_ENV_VAR_NAME
